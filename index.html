@@ -1,1 +1,142 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="coelho.PNG" type="image/x-icon">
+    
+    <title>Daniel Coelho - Portifólio</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Importando -->
+    <script src="https://kit.fontawesome.com/43be5b8b0f.js" crossorigin="anonymous"></script>
+    <!-- include jQuery :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Nunito&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- Animação de Loading -->
+    <script>
+        window.onload = () => {
+
+            document.querySelector('.load-container').style.display = "none";
+            document.querySelector('body').classList.remove("fixedPosition");
+
+        }
+    </script>
+    <div class="load-container">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Barra de navegcao -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">
+                <img id="icon" src="coelho.PNG" alt="Lordecoelho" />
+            </a>
+            <div class="navbar__auter" id="mobile-menu">
+                <span class="barr"></span>
+                <span class="barr"></span>
+                <span class="barr"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links" id="home">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#ex1" class="navbar__links" id="sobre" rel="modal:open">Sobre</a>
+                </li>
+                <!-- <li class="navbar__item">
+                    <a href="#servicos" class="navbar__links" id="servicos">Serviços</a>
+                </li> -->
+                <li class="navbar__btn">
+                    <a href="https://api.whatsapp.com/send?phone=5566984162808&text=Olá, tudo bem?" target="blank" class="button" id="contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Sessao Hero -->
+    <div class="hero" id="home">
+        <div class="hero__container">
+            <img id="splash" src="coelho.PNG" alt="Lordecoelho" />
+            <h1 class="hero__heading">
+                Daniel<span>Coelho</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Sessao sobre mim -->
+    <div class="main" id="sobre">
+        <div class="main__container">
+            <div class="main__conteudo">            
+                <ul>
+                    <li id="ex1" class="modal" style="background-color: rgb(71, 71, 71);">
+                        <h1>Quem sou eu?</h1>
+                        <h2>Me chamo Daniel dos Santos Coelho, sou um Desenvolvedor Front-end apaixonado por tecnologia e inovação;</h2>
+                        <div class="separa"><a class="sobre_btn" href="#ex2" rel="modal:open"><i class="fas fa-arrow-right"></i></a></div>
+                    </li>
+                    <li id="ex2" class="modal" style="background-color: rgb(71, 71, 71);">
+                        <h1>O que eu faço?</h1>
+                        <h2>Através de páginas, textos, ícones e imagens Transmito o que os visitantes da aplicação precisam com clareza;</h2>
+                        <div class="separa"><a class="sobre_btn" href="#ex3" rel="modal:open"><i class="fas fa-arrow-right"></i></a></div>
+                    </li>
+                    <li id="ex3" class="modal" style="background-color: rgb(71, 71, 71);">  
+                        <h1>Objetivos</h1>
+                        <h2>Conhecer o mercado de trabalho, conhecer pessoas, desenvolver a comunicação(com clientes/time), Adquirir experiência na prática;</h2>
+                        <div class="separa"><a class="sobre_btn" href="#ex4" rel="modal:open"><i class="fas fa-arrow-right"></i></a></div>
+                    </li>
+                    <li id="ex4" class="modal" style="background-color: rgb(71, 71, 71);">
+                        <h1>Tecnologias | skills que eu estudo | domino:</h1>
+                        <h2>
+                            HTML;<br>
+                            CSS;<br>
+                            Javascript;<br>
+                            ReactJS;<br>
+                            Busca avançada(Google);<br>
+                            Inglês(Intermediário);
+                        </h2>
+                        <div class="separa"><a class="sobre_btn" rel="modal:close">CLOSE</a></div>
+                    </li>
+                </ul>
+                <img id="rosto" src="https://64.media.tumblr.com/494322a23aaab9f60cd41223e6c79088/6adc832146e6cac6-29/s64x64u_c1/848cdbab8c34e06f705f2906bfbb2a4b617cab53.jpg" />
+                <p><a class="sobre_btn" href="#ex1" rel="modal:open"></i>Sobre mim</a></p>
+                <div class="L__icons">
+                    <i class="fab fa-html5 todos">                        
+                    </i><i class="fab fa-js todos">
+                    </i><i class="fab fa-react todos">
+                    </i><i class="fab fa-css3-alt todos">
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer__container">
+        <ul class="footer">
+            
+            <li class="social"><a href="https://www.linkedin.com/in/mrcoelho/"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            
+            <li class="social"><a href="https://github.com/mrdanielsancoelho"><i class="fab fa-github"></i>Github</a></li>
+            
+            <li class="social"><a href="https://www.instagram.com/olordecoelho/"><i class="fab fa-instagram"></i>Instagram</a></li>
+            
+            <li class="social"><a href="https://twitter.com/olordecoelho"><i class="fab fa-twitter"></i>Twiter</a></li>
+            
+        </ul>
+        <p class="right"> 2021 | Brasil </p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
